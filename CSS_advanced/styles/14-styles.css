@@ -1,7 +1,7 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
-   ============================ */
+   ========================================================================== */
 
 /**
  * 1. Correct the line height in all browsers.
@@ -14,7 +14,7 @@
   }
   
   /* Sections
-     ============================ */
+     ========================================================================== */
   
   /**
    * Remove the margin in all browsers.
@@ -43,7 +43,7 @@
   }
   
   /* Grouping content
-     ============================= */
+     ========================================================================== */
   
   /**
    * 1. Add the correct box sizing in Firefox.
@@ -67,7 +67,7 @@
   }
   
   /* Text-level semantics
-     ============================ */
+     ========================================================================== */
   
   /**
    * Remove the gray background on active links in IE 10.
@@ -440,3 +440,4 @@
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
   }
+  
