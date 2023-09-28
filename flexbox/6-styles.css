@@ -60,7 +60,7 @@
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: .04rem;
     --nav-item-display: inline-block;
-    --nav-item-margin: 0 2rem 0 0;
+    --nav-item-margin: 0 0 0 2rem;
     --nav-item-link-hover: var(--color-white);
   
     /** BUTTON **/
@@ -168,9 +168,16 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    
   }
+  
+  .row::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
   [class*='col-'] {
+    float: left;
     padding: 0.5rem;
   }
   
@@ -181,9 +188,6 @@
   .col-1-2 {
     width: 50%;
   }
-  .row{
-    display: flex;
-  }
   
   /* Navbar
       ============================= */
@@ -193,34 +197,37 @@
   }
   
   .nav {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
   }
-  
+
   .nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
+  }
+
+  .nav .nav-item + .nav-item {
     margin: var(--nav-item-margin);
   }
-  
+
   .nav .nav-link {
     display: block;
     padding: 0.5rem 0;
     position: relative;
   }
-  
+
   .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
     text-decoration: none;
   }
-  
+
   .nav .nav-link::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -229,7 +236,7 @@
     height: 0.2rem;
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
-  
+
   .nav .nav-item:hover .nav-link::before {
     background-color: var(--color-primary);
     width: 100%;
@@ -352,6 +359,16 @@
   
   .section-hero .section-inner {
     padding: 10rem 40rem 2rem 0;
+  }
+
+    /* Section Latest news ============================= */
+  .section-latest-news .row {
+    flex-direction: row-reverse;
+  }
+
+  /* Section SERVICES ============================= */
+  .section-services .row {
+    flex-wrap: wrap;
   }
   
   /*** 4. CARD ***/

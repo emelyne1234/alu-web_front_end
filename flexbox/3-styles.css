@@ -168,9 +168,16 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    
   }
+  
+  .row::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
   [class*='col-'] {
+    float: left;
     padding: 0.5rem;
   }
   
@@ -180,9 +187,6 @@
   
   .col-1-2 {
     width: 50%;
-  }
-  .row{
-    display: flex;
   }
   
   /* Navbar
@@ -354,6 +358,16 @@
     padding: 10rem 40rem 2rem 0;
   }
   
+  /* Section Latest news ============================= */
+  .section-latest-news .row {
+    flex-direction: row-reverse;
+  }
+
+  /* Section SERVICES ============================= */
+  .section-services .row {
+    flex-wrap: wrap;
+  }
+
   /*** 4. CARD ***/
   
   /* Card (all styles)
